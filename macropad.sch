@@ -543,12 +543,12 @@ Wire Wire Line
 $Comp
 L Connector:AVR-ISP-6 J?
 U 1 1 60E8B07C
-P 5000 3800
-F 0 "J?" H 4671 3896 50  0000 R CNN
-F 1 "AVR-ISP-6" H 4671 3805 50  0000 R CNN
-F 2 "" V 4750 3850 50  0001 C CNN
-F 3 " ~" H 3725 3250 50  0001 C CNN
-	1    5000 3800
+P 4700 4050
+F 0 "J?" H 4371 4146 50  0000 R CNN
+F 1 "AVR-ISP-6" H 4371 4055 50  0000 R CNN
+F 2 "" V 4450 4100 50  0001 C CNN
+F 3 " ~" H 3425 3500 50  0001 C CNN
+	1    4700 4050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -693,4 +693,31 @@ F 3 "~" H 10450 2750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10650 2750 10550 2750
+Text GLabel 5100 3950 2    50   Input ~ 0
+MOSI
+Text GLabel 5100 3850 2    50   Input ~ 0
+MISO
+Text GLabel 5100 4050 2    50   Input ~ 0
+SCK
+Text GLabel 5100 4150 2    50   Input ~ 0
+RESET
+Text GLabel 4600 3550 1    50   Input ~ 0
+BATT
+$Comp
+L power:GND #PWR?
+U 1 1 60F5E9DB
+P 4600 4450
+F 0 "#PWR?" H 4600 4200 50  0001 C CNN
+F 1 "GND" H 4605 4277 50  0000 C CNN
+F 2 "" H 4600 4450 50  0001 C CNN
+F 3 "" H 4600 4450 50  0001 C CNN
+	1    4600 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 1250 2    50   Input ~ 0
+SCK
+Text GLabel 3100 1350 2    50   Input ~ 0
+MOSI
+Text GLabel 3100 1450 2    50   Input ~ 0
+MISO
 $EndSCHEMATC
