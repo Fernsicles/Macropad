@@ -282,27 +282,8 @@ F 3 "" H 4650 2150 60  0001 C CNN
 	1    4650 2150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Battery_Management:MAX1811 U?
-U 1 1 60C4BC86
-P 6200 1800
-F 0 "U?" H 6250 2267 50  0000 C CNN
-F 1 "MAX1811" H 6250 2176 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6450 1450 50  0001 L CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1811.pdf" H 6200 1100 50  0001 C CNN
-	1    6200 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4750 1700 4900 1700
-Wire Wire Line
-	5800 1600 5800 1700
-Connection ~ 5800 1700
-Wire Wire Line
-	5800 2000 5800 1900
-Connection ~ 5800 1900
-Wire Wire Line
-	5800 1900 5800 1700
 Wire Wire Line
 	4750 2800 4800 2800
 Wire Wire Line
@@ -324,35 +305,33 @@ Wire Wire Line
 $Comp
 L Device:R_Small R?
 U 1 1 60C3001C
-P 5250 2000
-F 0 "R?" V 5446 2000 50  0000 C CNN
-F 1 "22" V 5355 2000 50  0000 C CNN
-F 2 "" H 5250 2000 50  0001 C CNN
-F 3 "~" H 5250 2000 50  0001 C CNN
-	1    5250 2000
+P 5700 2000
+F 0 "R?" V 5896 2000 50  0000 C CNN
+F 1 "22" V 5805 2000 50  0000 C CNN
+F 2 "" H 5700 2000 50  0001 C CNN
+F 3 "~" H 5700 2000 50  0001 C CNN
+	1    5700 2000
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R_Small R?
 U 1 1 60C30665
-P 5250 2100
-F 0 "R?" V 5150 2100 50  0000 C CNN
-F 1 "22" V 5050 2100 50  0000 C CNN
-F 2 "" H 5250 2100 50  0001 C CNN
-F 3 "~" H 5250 2100 50  0001 C CNN
-	1    5250 2100
+P 5700 2100
+F 0 "R?" V 5600 2100 50  0000 C CNN
+F 1 "22" V 5500 2100 50  0000 C CNN
+F 2 "" H 5700 2100 50  0001 C CNN
+F 3 "~" H 5700 2100 50  0001 C CNN
+	1    5700 2100
 	0    -1   -1   0   
 $EndComp
-Text GLabel 5550 2100 2    50   Input ~ 0
+Text GLabel 6000 2100 2    50   Input ~ 0
 D+
-Text GLabel 5550 2000 2    50   Input ~ 0
+Text GLabel 6000 2000 2    50   Input ~ 0
 D-
 Wire Wire Line
-	5350 2000 5550 2000
+	5800 2000 6000 2000
 Wire Wire Line
-	5550 2100 5350 2100
-Wire Wire Line
-	5150 2000 5000 2000
+	6000 2100 5800 2100
 Wire Wire Line
 	4750 2200 5000 2200
 Wire Wire Line
@@ -361,10 +340,6 @@ Connection ~ 5000 2000
 Wire Wire Line
 	5000 2000 4750 2000
 Connection ~ 4800 2800
-Wire Wire Line
-	6300 2200 6200 2200
-Wire Wire Line
-	5100 2100 5150 2100
 Connection ~ 5100 2100
 Wire Wire Line
 	4750 2100 5100 2100
@@ -385,83 +360,6 @@ F 3 "" H 4800 2850 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4800 2850 4800 2800
-$Comp
-L power:GND #PWR?
-U 1 1 60CCA3C0
-P 6200 2250
-F 0 "#PWR?" H 6200 2000 50  0001 C CNN
-F 1 "GND" H 6205 2077 50  0000 C CNN
-F 2 "" H 6200 2250 50  0001 C CNN
-F 3 "" H 6200 2250 50  0001 C CNN
-	1    6200 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 2250 6200 2200
-Connection ~ 6200 2200
-$Comp
-L Connector_Generic:Conn_01x02 J?
-U 1 1 60CD6EC8
-P 7000 850
-F 0 "J?" V 6872 930 50  0000 L CNN
-F 1 "Conn_01x02" V 6963 930 50  0000 L CNN
-F 2 "" H 7000 850 50  0001 C CNN
-F 3 "~" H 7000 850 50  0001 C CNN
-	1    7000 850 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60CE415E
-P 7000 1050
-F 0 "#PWR?" H 7000 800 50  0001 C CNN
-F 1 "GND" H 7005 877 50  0000 C CNN
-F 2 "" H 7000 1050 50  0001 C CNN
-F 3 "" H 7000 1050 50  0001 C CNN
-	1    7000 1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6700 1600 7100 1600
-Wire Wire Line
-	7100 1600 7100 1050
-Wire Wire Line
-	6700 1800 6850 1800
-Wire Wire Line
-	6850 1800 6850 1150
-$Comp
-L Device:LED D?
-U 1 1 60CF73D8
-P 5800 1150
-F 0 "D?" H 5750 1350 50  0000 L CNN
-F 1 "LED" H 5750 1250 50  0000 L CNN
-F 2 "" H 5800 1150 50  0001 C CNN
-F 3 "~" H 5800 1150 50  0001 C CNN
-	1    5800 1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60CFFA5C
-P 5450 1150
-F 0 "R?" V 5254 1150 50  0000 C CNN
-F 1 "200" V 5345 1150 50  0000 C CNN
-F 2 "" H 5450 1150 50  0001 C CNN
-F 3 "~" H 5450 1150 50  0001 C CNN
-	1    5450 1150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5550 1150 5650 1150
-Wire Wire Line
-	5950 1150 6850 1150
-Wire Wire Line
-	5350 1150 5200 1150
-Wire Wire Line
-	5200 1150 5200 1700
-Connection ~ 5200 1700
-Wire Wire Line
-	5200 1700 5800 1700
 Text GLabel 1550 2150 0    50   Input ~ 0
 D+
 Text GLabel 1550 2250 0    50   Input ~ 0
@@ -470,11 +368,6 @@ Wire Wire Line
 	1550 2150 1900 2150
 Wire Wire Line
 	1900 2250 1550 2250
-Text GLabel 5200 900  1    50   Input ~ 0
-VBUS
-Wire Wire Line
-	5200 900  5200 1150
-Connection ~ 5200 1150
 Text GLabel 1550 1950 0    50   Input ~ 0
 VBUS
 Wire Wire Line
@@ -485,62 +378,8 @@ Text GLabel 2250 4450 0    50   Input ~ 0
 UGND
 Wire Wire Line
 	2250 4450 2400 4450
-Text GLabel 4950 2700 2    50   Input ~ 0
+Text GLabel 5500 2700 2    50   Input ~ 0
 UGND
-Wire Wire Line
-	4950 2700 4800 2700
-$Comp
-L Regulator_Linear:LP5907MFX-3.3 U?
-U 1 1 60D4DF09
-P 8450 1000
-F 0 "U?" H 8450 1367 50  0000 C CNN
-F 1 "LP5907MFX-3.3" H 8450 1276 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8450 1350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 8450 1500 50  0001 C CNN
-	1    8450 1000
-	1    0    0    -1  
-$EndComp
-Text GLabel 7200 1600 2    50   Input ~ 0
-BATT
-Wire Wire Line
-	7200 1600 7100 1600
-Connection ~ 7100 1600
-Text GLabel 7750 900  0    50   Input ~ 0
-BATT
-Wire Wire Line
-	8050 900  8150 900 
-$Comp
-L Device:C_Small C?
-U 1 1 60D5BC90
-P 7950 900
-F 0 "C?" V 7721 900 50  0000 C CNN
-F 1 "1uF" V 7812 900 50  0000 C CNN
-F 2 "" H 7950 900 50  0001 C CNN
-F 3 "~" H 7950 900 50  0001 C CNN
-	1    7950 900 
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	7750 900  7850 900 
-$Comp
-L power:GND #PWR?
-U 1 1 60D69A13
-P 8450 1300
-F 0 "#PWR?" H 8450 1050 50  0001 C CNN
-F 1 "GND" H 8455 1127 50  0000 C CNN
-F 2 "" H 8450 1300 50  0001 C CNN
-F 3 "" H 8450 1300 50  0001 C CNN
-	1    8450 1300
-	1    0    0    -1  
-$EndComp
-Text GLabel 7750 1000 0    50   Input ~ 0
-VBUS
-Wire Wire Line
-	7750 1000 8150 1000
-Text GLabel 8850 900  2    50   Input ~ 0
-REG
-Wire Wire Line
-	8850 900  8750 900 
 Text GLabel 2400 750  1    50   Input ~ 0
 REG
 $Comp
@@ -558,4 +397,300 @@ Wire Wire Line
 	3650 3250 3500 3250
 Wire Wire Line
 	3300 3250 3100 3250
+Text GLabel 5600 1700 2    50   Input ~ 0
+VBUS
+$Comp
+L Regulator_Linear:LP5907MFX-3.3 U?
+U 1 1 60D4DF09
+P 10050 1100
+F 0 "U?" H 10050 1467 50  0000 C CNN
+F 1 "LP5907MFX-3.3" H 10050 1376 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 10050 1450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 10050 1600 50  0001 C CNN
+	1    10050 1100
+	1    0    0    -1  
+$EndComp
+Text GLabel 9350 1000 0    50   Input ~ 0
+BATT
+Wire Wire Line
+	9650 1000 9750 1000
+$Comp
+L Device:C_Small C?
+U 1 1 60D5BC90
+P 9550 1000
+F 0 "C?" V 9321 1000 50  0000 C CNN
+F 1 "1uF" V 9412 1000 50  0000 C CNN
+F 2 "" H 9550 1000 50  0001 C CNN
+F 3 "~" H 9550 1000 50  0001 C CNN
+	1    9550 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 1000 9450 1000
+$Comp
+L power:GND #PWR?
+U 1 1 60D69A13
+P 10050 1400
+F 0 "#PWR?" H 10050 1150 50  0001 C CNN
+F 1 "GND" H 10055 1227 50  0000 C CNN
+F 2 "" H 10050 1400 50  0001 C CNN
+F 3 "" H 10050 1400 50  0001 C CNN
+	1    10050 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 9350 1100 0    50   Input ~ 0
+VBUS
+Wire Wire Line
+	9350 1100 9750 1100
+Text GLabel 10450 1000 2    50   Input ~ 0
+REG
+Wire Wire Line
+	10450 1000 10350 1000
+$Comp
+L Battery_Management:MAX1811 U?
+U 1 1 60C4BC86
+P 9350 2950
+F 0 "U?" H 9400 3417 50  0000 C CNN
+F 1 "MAX1811" H 9400 3326 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9600 2600 50  0001 L CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1811.pdf" H 9350 2250 50  0001 C CNN
+	1    9350 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 3350 9350 3350
+$Comp
+L power:GND #PWR?
+U 1 1 60CCA3C0
+P 9350 3400
+F 0 "#PWR?" H 9350 3150 50  0001 C CNN
+F 1 "GND" H 9355 3227 50  0000 C CNN
+F 2 "" H 9350 3400 50  0001 C CNN
+F 3 "" H 9350 3400 50  0001 C CNN
+	1    9350 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9350 3400 9350 3350
+Connection ~ 9350 3350
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 60CD6EC8
+P 10150 2300
+F 0 "J?" V 10022 2380 50  0000 L CNN
+F 1 "Conn_01x02" V 10113 2380 50  0000 L CNN
+F 2 "" H 10150 2300 50  0001 C CNN
+F 3 "~" H 10150 2300 50  0001 C CNN
+	1    10150 2300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60CE415E
+P 10150 2500
+F 0 "#PWR?" H 10150 2250 50  0001 C CNN
+F 1 "GND" H 10155 2327 50  0000 C CNN
+F 2 "" H 10150 2500 50  0001 C CNN
+F 3 "" H 10150 2500 50  0001 C CNN
+	1    10150 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60CF73D8
+P 10150 2950
+F 0 "D?" H 10100 2800 50  0000 L CNN
+F 1 "LED" H 10100 2700 50  0000 L CNN
+F 2 "" H 10150 2950 50  0001 C CNN
+F 3 "~" H 10150 2950 50  0001 C CNN
+	1    10150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60CFFA5C
+P 10500 2950
+F 0 "R?" V 10304 2950 50  0000 C CNN
+F 1 "200" V 10395 2950 50  0000 C CNN
+F 2 "" H 10500 2950 50  0001 C CNN
+F 3 "~" H 10500 2950 50  0001 C CNN
+	1    10500 2950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10400 2950 10300 2950
+Text GLabel 10650 2750 2    50   Input ~ 0
+BATT
+Wire Wire Line
+	9850 2950 10000 2950
+Text GLabel 10750 2950 2    50   Input ~ 0
+VBUS
+Wire Wire Line
+	10750 2950 10600 2950
+Text GLabel 8850 2750 0    50   Input ~ 0
+VBUS
+Wire Wire Line
+	8850 2750 8950 2750
+Wire Wire Line
+	8950 2750 8950 2850
+Connection ~ 8950 2750
+Connection ~ 8950 2850
+Wire Wire Line
+	8950 2850 8950 3050
+Connection ~ 8950 3050
+Wire Wire Line
+	8950 3050 8950 3150
+$Comp
+L Connector:AVR-ISP-6 J?
+U 1 1 60E8B07C
+P 5000 3800
+F 0 "J?" H 4671 3896 50  0000 R CNN
+F 1 "AVR-ISP-6" H 4671 3805 50  0000 R CNN
+F 2 "" V 4750 3850 50  0001 C CNN
+F 3 " ~" H 3725 3250 50  0001 C CNN
+	1    5000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 60E8EBAA
+P 5200 1650
+F 0 "#PWR?" H 5200 1500 50  0001 C CNN
+F 1 "VCC" H 5215 1823 50  0000 C CNN
+F 2 "" H 5200 1650 50  0001 C CNN
+F 3 "" H 5200 1650 50  0001 C CNN
+	1    5200 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 1700 5200 1650
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 60EAAB06
+P 5400 1700
+F 0 "F?" V 5195 1700 50  0000 C CNN
+F 1 "500m" V 5286 1700 50  0000 C CNN
+F 2 "" H 5450 1500 50  0001 L CNN
+F 3 "~" H 5400 1700 50  0001 C CNN
+	1    5400 1700
+	0    1    1    0   
+$EndComp
+Connection ~ 5200 1700
+Wire Wire Line
+	5200 1700 5300 1700
+Wire Wire Line
+	5500 1700 5600 1700
+NoConn ~ 4750 1800
+NoConn ~ 4750 2400
+$Comp
+L Device:R_Small R?
+U 1 1 60EC2287
+P 5050 2600
+F 0 "R?" H 5100 2650 50  0000 L CNN
+F 1 "5.1k" H 4850 2550 50  0000 L CNN
+F 2 "" H 5050 2600 50  0001 C CNN
+F 3 "~" H 5050 2600 50  0001 C CNN
+	1    5050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60ECAE5F
+P 5250 2600
+F 0 "R?" H 5309 2646 50  0000 L CNN
+F 1 "5.1k" H 5309 2555 50  0000 L CNN
+F 2 "" H 5250 2600 50  0001 C CNN
+F 3 "~" H 5250 2600 50  0001 C CNN
+	1    5250 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 2500 5050 2500
+Wire Wire Line
+	4800 2700 5050 2700
+Connection ~ 5050 2700
+Wire Wire Line
+	5050 2700 5250 2700
+Wire Wire Line
+	5500 2700 5250 2700
+Connection ~ 5250 2700
+Wire Wire Line
+	5250 2500 5250 1900
+Wire Wire Line
+	5250 1900 4750 1900
+$Comp
+L Power_Protection:PRTR5V0U2X D?
+U 1 1 60EE577E
+P 6600 3450
+F 0 "D?" H 6800 3100 50  0000 L CNN
+F 1 "PRTR5V0U2X" H 6800 3000 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-143" H 6660 3450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/PRTR5V0U2X.pdf" H 6660 3450 50  0001 C CNN
+	1    6600 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 2750 10250 2750
+Wire Wire Line
+	10250 2750 10250 2500
+Connection ~ 10250 2750
+Wire Wire Line
+	10250 2750 10350 2750
+Text GLabel 5350 2150 3    50   Input ~ 0
+IO1
+Text GLabel 5450 2150 3    50   Input ~ 0
+IO2
+Wire Wire Line
+	5450 2150 5450 2000
+Wire Wire Line
+	5000 2000 5450 2000
+Wire Wire Line
+	5600 2000 5450 2000
+Connection ~ 5450 2000
+Wire Wire Line
+	5100 2100 5350 2100
+Wire Wire Line
+	5350 2150 5350 2100
+Connection ~ 5350 2100
+Wire Wire Line
+	5350 2100 5600 2100
+Text GLabel 6100 3450 0    50   Input ~ 0
+IO1
+Text GLabel 7100 3450 2    50   Input ~ 0
+IO2
+$Comp
+L power:VCC #PWR?
+U 1 1 60F29263
+P 6600 2950
+F 0 "#PWR?" H 6600 2800 50  0001 C CNN
+F 1 "VCC" H 6615 3123 50  0000 C CNN
+F 2 "" H 6600 2950 50  0001 C CNN
+F 3 "" H 6600 2950 50  0001 C CNN
+	1    6600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60F2A7D1
+P 6600 3950
+F 0 "#PWR?" H 6600 3700 50  0001 C CNN
+F 1 "GND" H 6605 3777 50  0000 C CNN
+F 2 "" H 6600 3950 50  0001 C CNN
+F 3 "" H 6600 3950 50  0001 C CNN
+	1    6600 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Polyfuse_Small F?
+U 1 1 60F3E0ED
+P 10450 2750
+F 0 "F?" V 10245 2750 50  0000 C CNN
+F 1 "500m" V 10336 2750 50  0000 C CNN
+F 2 "" H 10500 2550 50  0001 L CNN
+F 3 "~" H 10450 2750 50  0001 C CNN
+	1    10450 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10650 2750 10550 2750
 $EndSCHEMATC
