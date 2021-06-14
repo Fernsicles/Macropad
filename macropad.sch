@@ -103,11 +103,6 @@ Wire Wire Line
 Wire Wire Line
 	1000 1550 1900 1550
 Wire Wire Line
-	3850 800  4050 800 
-Connection ~ 3850 800 
-Wire Wire Line
-	3650 800  3850 800 
-Wire Wire Line
 	3650 1000 3850 1000
 Wire Wire Line
 	3850 1000 4050 1000
@@ -126,19 +121,6 @@ Wire Wire Line
 	3250 1000 3650 1000
 Wire Wire Line
 	3850 1050 3850 1000
-Wire Wire Line
-	3850 750  3850 800 
-$Comp
-L power:VCC #PWR?
-U 1 1 60C49678
-P 3850 750
-F 0 "#PWR?" H 3850 600 50  0001 C CNN
-F 1 "VCC" H 3865 923 50  0000 C CNN
-F 2 "" H 3850 750 50  0001 C CNN
-F 3 "" H 3850 750 50  0001 C CNN
-	1    3850 750 
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 60C3C3CE
@@ -378,8 +360,6 @@ Wire Wire Line
 	2250 4450 2400 4450
 Text GLabel 5500 2700 2    50   Input ~ 0
 UGND
-Text GLabel 2400 750  1    50   Input ~ 0
-REG
 $Comp
 L Device:R_Small R?
 U 1 1 60C2A4F4
@@ -400,50 +380,42 @@ VBUS
 $Comp
 L Regulator_Linear:LP5907MFX-3.3 U?
 U 1 1 60D4DF09
-P 10050 1100
-F 0 "U?" H 10050 1467 50  0000 C CNN
-F 1 "LP5907MFX-3.3" H 10050 1376 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 10050 1450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 10050 1600 50  0001 C CNN
-	1    10050 1100
+P 9800 5250
+F 0 "U?" H 9800 5617 50  0000 C CNN
+F 1 "LP5907MFX-3.3" H 9800 5526 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 9800 5600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lp5907.pdf" H 9800 5750 50  0001 C CNN
+	1    9800 5250
 	1    0    0    -1  
 $EndComp
-Text GLabel 9350 1000 0    50   Input ~ 0
-BATT
 Wire Wire Line
-	9650 1000 9750 1000
+	9400 5150 9500 5150
 $Comp
 L Device:C_Small C?
 U 1 1 60D5BC90
-P 9550 1000
-F 0 "C?" V 9321 1000 50  0000 C CNN
-F 1 "1uF" V 9412 1000 50  0000 C CNN
-F 2 "" H 9550 1000 50  0001 C CNN
-F 3 "~" H 9550 1000 50  0001 C CNN
-	1    9550 1000
+P 9300 5150
+F 0 "C?" V 9071 5150 50  0000 C CNN
+F 1 "1uF" V 9162 5150 50  0000 C CNN
+F 2 "" H 9300 5150 50  0001 C CNN
+F 3 "~" H 9300 5150 50  0001 C CNN
+	1    9300 5150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	9350 1000 9450 1000
 $Comp
 L power:GND #PWR?
 U 1 1 60D69A13
-P 10050 1400
-F 0 "#PWR?" H 10050 1150 50  0001 C CNN
-F 1 "GND" H 10055 1227 50  0000 C CNN
-F 2 "" H 10050 1400 50  0001 C CNN
-F 3 "" H 10050 1400 50  0001 C CNN
-	1    10050 1400
+P 9800 5550
+F 0 "#PWR?" H 9800 5300 50  0001 C CNN
+F 1 "GND" H 9805 5377 50  0000 C CNN
+F 2 "" H 9800 5550 50  0001 C CNN
+F 3 "" H 9800 5550 50  0001 C CNN
+	1    9800 5550
 	1    0    0    -1  
 $EndComp
-Text GLabel 9350 1100 0    50   Input ~ 0
-VBUS
-Wire Wire Line
-	9350 1100 9750 1100
-Text GLabel 10450 1000 2    50   Input ~ 0
+Text GLabel 10200 5150 2    50   Input ~ 0
 REG
 Wire Wire Line
-	10450 1000 10350 1000
+	10200 5150 10100 5150
 $Comp
 L Battery_Management:MAX1811 U?
 U 1 1 60C4BC86
@@ -699,8 +671,6 @@ Text GLabel 5100 4050 2    50   Input ~ 0
 SCK
 Text GLabel 5100 4150 2    50   Input ~ 0
 RESET
-Text GLabel 4600 3550 1    50   Input ~ 0
-BATT
 $Comp
 L power:GND #PWR?
 U 1 1 60F5E9DB
@@ -720,8 +690,6 @@ Text GLabel 3100 1450 2    50   Input ~ 0
 MISO
 Wire Wire Line
 	1700 1150 1800 1150
-Text GLabel 1800 750  1    50   Input ~ 0
-BATT
 Wire Wire Line
 	1800 750  1800 850 
 Wire Wire Line
@@ -740,4 +708,155 @@ F 3 "~" H 1800 950 50  0001 C CNN
 	1    1800 950 
 	-1   0    0    1   
 $EndComp
+$Comp
+L Power_Management:LTC4412xS6 U?
+U 1 1 60FD7D97
+P 7900 5850
+F 0 "U?" H 7900 6431 50  0000 C CNN
+F 1 "LTC4412xS6" H 7900 6340 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 8550 5500 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/4412fb.pdf" H 10000 5650 50  0001 C CNN
+	1    7900 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N5819 D?
+U 1 1 60FF6140
+P 7900 4750
+F 0 "D?" H 7900 4967 50  0000 C CNN
+F 1 "1N5819" H 7900 4876 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7900 4575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 7900 4750 50  0001 C CNN
+	1    7900 4750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3650 800  3850 800 
+Wire Wire Line
+	3850 800  3850 750 
+Connection ~ 3850 800 
+Wire Wire Line
+	3850 800  4050 800 
+$Comp
+L Transistor_FET:FDN340P Q?
+U 1 1 610158B0
+P 8600 5250
+F 0 "Q?" V 8942 5250 50  0000 C CNN
+F 1 "FDN340P" V 8851 5250 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 8800 5175 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/FDN340P-D.PDF" H 8600 5250 50  0001 L CNN
+	1    8600 5250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 61021E90
+P 2400 750
+F 0 "#PWR?" H 2400 600 50  0001 C CNN
+F 1 "+5V" H 2415 923 50  0000 C CNN
+F 2 "" H 2400 750 50  0001 C CNN
+F 3 "" H 2400 750 50  0001 C CNN
+	1    2400 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 610232C4
+P 1800 750
+F 0 "#PWR?" H 1800 600 50  0001 C CNN
+F 1 "+5V" H 1815 923 50  0000 C CNN
+F 2 "" H 1800 750 50  0001 C CNN
+F 3 "" H 1800 750 50  0001 C CNN
+	1    1800 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 610277FD
+P 4600 3550
+F 0 "#PWR?" H 4600 3400 50  0001 C CNN
+F 1 "+5V" H 4615 3723 50  0000 C CNN
+F 2 "" H 4600 3550 50  0001 C CNN
+F 3 "" H 4600 3550 50  0001 C CNN
+	1    4600 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 610420AE
+P 3850 750
+F 0 "#PWR?" H 3850 600 50  0001 C CNN
+F 1 "+5V" H 3865 923 50  0000 C CNN
+F 2 "" H 3850 750 50  0001 C CNN
+F 3 "" H 3850 750 50  0001 C CNN
+	1    3850 750 
+	1    0    0    -1  
+$EndComp
+Text GLabel 7650 4750 0    50   Input ~ 0
+VBUS
+Wire Wire Line
+	7650 4750 7750 4750
+Text GLabel 7200 5750 0    50   Input ~ 0
+BATT
+Wire Wire Line
+	7200 5750 7450 5750
+Wire Wire Line
+	8600 5450 7900 5450
+Wire Wire Line
+	8400 5150 7450 5150
+Wire Wire Line
+	7450 5150 7450 5750
+Connection ~ 7450 5750
+Wire Wire Line
+	7450 5750 7500 5750
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 610B4C5A
+P 9300 5550
+F 0 "SW?" H 9300 5785 50  0000 C CNN
+F 1 "SW_SPST" H 9300 5694 50  0000 C CNN
+F 2 "" H 9300 5550 50  0001 C CNN
+F 3 "~" H 9300 5550 50  0001 C CNN
+	1    9300 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9100 5550 9100 5150
+Wire Wire Line
+	8800 5150 8900 5150
+Wire Wire Line
+	8050 4750 8900 4750
+Wire Wire Line
+	8900 4750 8900 5150
+Connection ~ 8900 5150
+Wire Wire Line
+	8900 5150 9000 5150
+$Comp
+L power:GND #PWR?
+U 1 1 610D3F1D
+P 7500 6250
+F 0 "#PWR?" H 7500 6000 50  0001 C CNN
+F 1 "GND" H 7505 6077 50  0000 C CNN
+F 2 "" H 7500 6250 50  0001 C CNN
+F 3 "" H 7500 6250 50  0001 C CNN
+	1    7500 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8300 5750 9000 5750
+Wire Wire Line
+	9000 5750 9000 5150
+Wire Wire Line
+	9100 5150 9200 5150
+Wire Wire Line
+	9500 5550 9500 5250
+Wire Wire Line
+	9000 5150 9100 5150
+Connection ~ 9000 5150
+Connection ~ 9100 5150
+Wire Wire Line
+	7900 6250 7500 6250
+Wire Wire Line
+	7500 6250 7500 5950
+Connection ~ 7500 6250
 $EndSCHEMATC
